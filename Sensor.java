@@ -13,6 +13,15 @@ public class Sensor extends Thread {
     }
 
     public void run() {
-        // COMPLETAR
+        for (int i = 1; i <= baseEventos*id; i++) {
+            int tipo = (int)(Math.random()*numSensores) + 1; // TIPO DE EVENTO ENTRE 1 Y NUMSENSORES
+            Evento evento = new Evento(tipo, id, i);
+            
+            try {
+                buzonEntrada.enviar(evento);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

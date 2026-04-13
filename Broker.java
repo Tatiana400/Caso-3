@@ -13,7 +13,27 @@ public class Broker extends Thread {
     }
 
     public void run() {
-        // COMPLETAR
+        for (int i = 0; i < totalEventos; i++) {
+            try {
+                Evento evento = entrada.recibir();
+                int r = (int)(Math.random()*201); // NÚMERO ENTRE 0 Y 200
+
+                if (r % 8 == 0) { // ANÓMALO: MÚLTIPLO DE 8
+                    alertas.enviar(evento);
+                } else { // NORMAL
+                    clasificacion.enviar(evento);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    
+        // PARA MANEJAR EL FIN DE LOS EVENTOS
+        try {
+            alertas.enviar(Evento.crearFin()); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

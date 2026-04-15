@@ -1,8 +1,8 @@
 // FILTRAR EVENTOS: DEFINE SI ES NORMAL O ANÓMALO
 public class Broker extends Thread {
-    private Buzon entrada;
-    private Buzon alertas;
-    private Buzon clasificacion;
+    private Buzon entrada; // LOS REVISA
+    private Buzon alertas; // PARA LOS ANÓMALOS
+    private Buzon clasificacion; // PARA LOS NORMALES
     private int totalEventos;
 
     public Broker(Buzon entrada, Buzon alertas, Buzon clasificacion, int totalEventos) {
@@ -12,7 +12,7 @@ public class Broker extends Thread {
         this.totalEventos = totalEventos;
     }
 
-    public void run() {
+    public void filtrarEventos() {
         for (int i = 0; i < totalEventos; i++) {
             try {
                 Evento evento = entrada.recibir();
@@ -24,7 +24,7 @@ public class Broker extends Thread {
                     clasificacion.enviar(evento);
                 }
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         }
     
@@ -32,8 +32,13 @@ public class Broker extends Thread {
         try {
             alertas.enviar(Evento.crearFin()); 
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
+    }
+
+    @Override
+    public void run() {
+        filtrarEventos();
     }
 
 }

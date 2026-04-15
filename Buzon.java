@@ -14,8 +14,10 @@ public class Buzon {
 
     // REVISAR BIEN
     public synchronized void enviar(Evento evento) throws InterruptedException {
-        while (eventos.size() >= capacidad) {
-            wait();
+        if (capacidad > 0) {
+            while (eventos.size() >= capacidad) {
+                wait(); // ESPERA PASIVA
+            }
         }
         eventos.add(evento);
         notifyAll();
@@ -24,9 +26,9 @@ public class Buzon {
     // REVISAR BIEN
     public synchronized Evento recibir() throws InterruptedException {
         while (eventos.isEmpty()) {
-            wait();
+            wait(); // ESPERA PASIVA
         }
-        Evento evento = eventos.poll();
+        Evento evento = eventos.remove(); // ELIMINA EL MÁS ANTIGUO
         notifyAll();
         return evento;
     }

@@ -2,20 +2,21 @@
 public class Sensor extends Thread {
     private int id;
     private int baseEventos;
-    private int numSensores; // ns
+    private int numServidores; // ns
     private Buzon buzonEntrada;
 
-    public Sensor(int id, int baseEventos, int numSensores, Buzon buzonEntrada) {
+    public Sensor(int id, int baseEventos, int numServidores, Buzon buzonEntrada) {
         this.id = id;
         this.baseEventos = baseEventos;
-        this.numSensores = numSensores;
+        this.numServidores = numServidores;
         this.buzonEntrada = buzonEntrada;
     }
 
-    public void generarEventos() {
+    @Override
+    public void run() {
         int totalEventos = baseEventos * id; // CADA SENSOR GENERA UN MÚLTIPLO DE BASEEVENTOS
         for (int i = 1; i <= totalEventos; i++) {
-            int tipo = (int)(Math.random()*numSensores) + 1; // TIPO DE EVENTO ENTRE 1 Y NUMSENSORES
+            int tipo = (int)(Math.random()*numServidores) + 1; // TIPO DE EVENTO ENTRE 1 Y NUMSERVIDORES
             Evento evento = new Evento(id, tipo, i);
             
             try {
@@ -24,10 +25,6 @@ public class Sensor extends Thread {
                 Thread.currentThread().interrupt();
             }
         }
-    }
-
-    @Override
-    public void run() {
-        generarEventos();
+        System.out.println("Sensor " + id + " terminado");
     }
 }

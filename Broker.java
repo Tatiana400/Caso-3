@@ -12,7 +12,8 @@ public class Broker extends Thread {
         this.totalEventos = totalEventos;
     }
 
-    public void filtrarEventos() {
+    @Override
+    public void run() {
         for (int i = 0; i < totalEventos; i++) {
             try {
                 Evento evento = entrada.recibir();
@@ -31,14 +32,9 @@ public class Broker extends Thread {
         // PARA MANEJAR EL FIN DE LOS EVENTOS
         try {
             alertas.enviar(Evento.crearFin()); 
+            System.out.println("Broker terminado");
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
     }
-
-    @Override
-    public void run() {
-        filtrarEventos();
-    }
-
 }

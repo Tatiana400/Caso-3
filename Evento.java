@@ -1,5 +1,4 @@
 // PRESENTAR CADA EVENTO DEL SISTEMA
-
 public class Evento {
     private int sensorId;
     private int tipo; // DEFINE A CUÁL SERVIDOR VA EL EVENTP

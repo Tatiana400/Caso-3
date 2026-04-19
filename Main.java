@@ -58,7 +58,7 @@ public class Main {
         Administrador admin = new Administrador(alertas, clasificacion, nc);
         hilos.add(admin);
 
-        Clasificador.setActivos(nc);
+        Clasificador.iniciarBarrera(nc, buzonesServidores);
         for (int i = 0; i < nc; i++) {
             Clasificador c = new Clasificador(clasificacion, buzonesServidores);
             hilos.add(c);

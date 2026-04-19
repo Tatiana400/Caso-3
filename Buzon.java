@@ -11,6 +11,10 @@ public class Buzon {
         this.eventos = new LinkedList<>();
     }
 
+    public synchronized boolean estaLleno() {
+        return capacidad > 0 && eventos.size() >= capacidad;
+    }
+
     public synchronized void enviar(Evento evento) throws InterruptedException {
         if (capacidad > 0) {
             while (eventos.size() >= capacidad) {

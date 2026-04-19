@@ -21,7 +21,14 @@ public class Broker extends Thread {
 
                 if (r % 8 == 0) { // ANÓMALO: MÚLTIPLO DE 8
                     alertas.enviar(evento);
+                    while (alertas.estaLleno()) {
+                        Thread.yield(); // ESPERA SEMI-ACTIVA SI EL BUZÓN DE ALERTAS ESTÁ LLENO
+                    }
+                    alertas.enviar(evento);
                 } else { // NORMAL
+                    while (clasificacion.estaLleno()) {
+                        Thread.yield(); // ESPERA SEMI-ACTIVA SI EL BUZÓN DE CLASIFICACIÓN ESTÁ LLENO
+                    }
                     clasificacion.enviar(evento);
                 }
             } catch (InterruptedException e) {

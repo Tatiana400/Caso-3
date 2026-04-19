@@ -20,6 +20,9 @@ public class Sensor extends Thread {
             Evento evento = new Evento(id, tipo, i);
             
             try {
+                while (buzonEntrada.estaLleno()) {
+                    Thread.yield(); // ESPERA SEMI-ACTIVA SI EL BUZÓN DE ENTRADA ESTÁ LLENO
+                }
                 buzonEntrada.enviar(evento);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();

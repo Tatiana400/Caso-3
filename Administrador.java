@@ -21,6 +21,9 @@ public class Administrador extends Thread {
                 } else {
                     int r = (int)(Math.random()*21); // NÚMERO ENTRE 0 Y 20
                     if (r % 4 == 0) { // NORMAL: MÚLTIPLO DE 4
+                        while (clasificacion.estaLleno()) {
+                            Thread.yield(); // ESPERA SEMI-ACTIVA SI EL BUZÓN DE CLASIFICACIÓN ESTÁ LLENO
+                        }
                         clasificacion.enviar(evento);
                     }
                 }

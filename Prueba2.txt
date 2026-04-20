@@ -1,0 +1,134 @@
+Configuración 2 3 3 2 2 3 3
+Sensores: 3
+Base eventos: 3
+Clasificadores: 2
+Servidores: 2
+Tam1: 3
+Tam2: 3
+Total eventos: 18
+Enviado evento 1
+Enviado evento 2
+Enviado evento 3
+Enviado evento 1
+Sensor 1 terminado
+Enviado evento 2
+Enviado evento 3
+Enviado evento 4
+Enviado evento 5
+Enviado evento 6
+Sensor 2 terminado
+Recibido evento 1
+Enviado evento 1
+Enviado evento 1
+Enviado evento 2
+Recibido evento 2
+Recibido evento 1
+Enviado evento 2
+Enviado evento 3
+Recibido evento 2
+Enviado evento 2
+Recibido evento 3
+Recibido evento 2
+Enviado evento 3
+Enviado evento 4
+Recibido evento 3
+Enviado evento 5
+Enviado evento 6
+Enviado evento 7
+Enviado evento 8
+Enviado evento 9
+Sensor 3 terminado
+Recibido evento 1
+Enviado evento 1
+Recibido evento 2
+Recibido evento 1
+Enviado evento 1
+Enviado evento 2
+Recibido evento 3
+Recibido evento 1
+Recibido evento 2
+Enviado evento 2
+Enviado evento 3
+Recibido evento 3
+Recibido evento 4
+Enviado evento 4
+Recibido evento 5
+Enviado evento 3
+Recibido evento 4
+Enviado evento 5
+Enviado evento 4
+Recibido evento 6
+Recibido evento 5
+Enviado evento 6
+Recibido evento 1
+Recibido evento 6
+Enviado evento 1
+Recibido evento 2
+Enviado evento 6
+Recibido evento 1
+Enviado evento 1
+Recibido evento 6
+Enviado evento 6
+Enviado evento 2
+Recibido evento 2
+Recibido evento 3
+Enviado evento 3
+Recibido evento 4
+Enviado evento 2
+Recibido evento 3
+Enviado evento 4
+Recibido evento 5
+Recibido evento 4
+Enviado evento 5
+Recibido evento 6
+Enviado evento 6
+Recibido evento 7
+Enviado evento 7
+Recibido evento 8
+Recibido evento 2
+Enviado evento 3
+Recibido evento 5
+Enviado evento 8
+Recibido evento 9
+Recibido evento 4
+Enviado evento 4
+Recibido evento 6
+Enviado evento 9
+Enviado evento 0
+Broker terminado
+Recibido evento 0
+Recibido evento 3
+Enviado evento 5
+Recibido evento 7
+Enviado evento 0
+Recibido evento 1
+Enviado evento 6
+Recibido evento 8
+Enviado evento 0
+Administrador terminado
+Recibido evento 6
+Enviado evento 8
+Recibido evento 9
+Recibido evento 4
+Enviado evento 9
+Recibido evento 0
+Último clasificador liberó la barrera
+Recibido evento 2
+Enviado evento 7
+Recibido evento 0
+Último clasificador liberó la barrera
+Recibido evento 6
+Enviado evento 0
+Recibido evento 3
+Enviado evento 0
+Último clasificador envió FIN a servidores
+Recibido evento 5
+Recibido evento 8
+Recibido evento 7
+Recibido evento 0
+Servidor terminado
+Recibido evento 9
+Recibido evento 0
+Servidor terminado
+Sistema terminado correctamente. Todos los buzones vacíos.
+PS C:\Users\User\OneDrive\Documentos\TIC\Caso-3> 

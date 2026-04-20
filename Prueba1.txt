@@ -1,0 +1,59 @@
+Configuración 1 2 2 1 1 2 2
+Sensores: 2
+Base eventos: 2
+Clasificadores: 1
+Servidores: 1
+Tam1: 2
+Tam2: 2
+Total eventos: 6
+Enviado evento 1
+Enviado evento 2
+Enviado evento 3
+Enviado evento 4
+Enviado evento 1
+Enviado evento 2
+Sensor 2 terminado
+Sensor 1 terminado
+Recibido evento 1
+Enviado evento 1
+Recibido evento 2
+Recibido evento 1
+Enviado evento 2
+Recibido evento 3
+Recibido evento 2
+Enviado evento 3
+Enviado evento 2
+Recibido evento 4
+Recibido evento 3
+Recibido evento 2
+Enviado evento 4
+Enviado evento 3
+Recibido evento 1
+Recibido evento 4
+Enviado evento 1
+Recibido evento 1
+Recibido evento 2
+Enviado evento 4
+Enviado evento 1
+Enviado evento 2
+Recibido evento 4
+Enviado evento 0
+Recibido evento 0
+Broker terminado
+Enviado evento 0
+Administrador terminado
+Recibido evento 3
+Enviado evento 4
+Recibido evento 2
+Recibido evento 1
+Enviado evento 2
+Recibido evento 0
+Último clasificador liberó la barrera
+Recibido evento 4
+Enviado evento 0
+Último clasificador envió FIN a servidores
+Recibido evento 2
+Recibido evento 0
+Servidor terminado
+Sistema terminado correctamente. Todos los buzones vacíos.
+PS C:\Users\User\OneDrive\Documentos\TIC\Caso-3> 

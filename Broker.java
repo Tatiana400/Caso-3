@@ -20,7 +20,6 @@ public class Broker extends Thread {
                 int r = (int)(Math.random()*201); // NÚMERO ENTRE 0 Y 200
 
                 if (r % 8 == 0) { // ANÓMALO: MÚLTIPLO DE 8
-                    alertas.enviar(evento);
                     while (alertas.estaLleno()) {
                         Thread.yield(); // ESPERA SEMI-ACTIVA SI EL BUZÓN DE ALERTAS ESTÁ LLENO
                     }

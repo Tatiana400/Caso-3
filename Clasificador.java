@@ -45,9 +45,8 @@ public class Clasificador extends Thread {
                     servidores[destino].enviar(evento); // ENVIAR AL SERVIDOR CORRECTO
                 }
             }
-            System.out.println("Clasificador llegó a la barrera");
+            System.out.println("Último clasificador liberó la barrera");
             barrera.await(); // ESPERA HASTA QUE TODOS LOS CLASIFICADORES LLEGUEN A LA BARRERA
-            System.out.println("Todos los clasificadores llegaron a la barrera");
             
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

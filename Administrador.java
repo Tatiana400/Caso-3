@@ -32,8 +32,8 @@ public class Administrador extends Thread {
             // ENVIAR FIN A LOS CLASIFICADORES
             for (int i = 0; i < nc; i++) {
                 clasificacion.enviar(Evento.crearFin());
-                System.out.println("Administrador terminado");
             }
+            System.out.println("Administrador terminado");
 
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

@@ -15,6 +15,10 @@ public class Buzon {
         return capacidad > 0 && eventos.size() >= capacidad;
     }
 
+    public synchronized boolean estaVacio() {
+        return eventos.size() == 0;
+    }
+
     public synchronized void enviar(Evento evento) throws InterruptedException {
         if (capacidad > 0) {
             while (eventos.size() >= capacidad) {

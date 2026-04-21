@@ -14,6 +14,9 @@ public class Administrador extends Thread {
         try {
             boolean terminado = false;
             while (!terminado) {
+                while (alertas.estaVacio()) {
+                    Thread.yield(); // Espera semiactiva si el buzón está vacío
+                }
                 Evento evento = alertas.recibir();
 
                 if (evento.isFin()) {
